@@ -9,10 +9,14 @@ RUN adduser --disabled-password --gecos '' clojure && \
     adduser clojure sudo && \
     echo '%sudo ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
 
+RUN mkdir -p /root/docker
+WORKDIR /root
+
+EXPOSE 7894
+
 # WORKDIR /home/clojure
 # ENV HOME /home/clojure
 # VOLUME ["/home/clojure"]
 
 # USER clojure
 
-RUN mkdir -p /root/docker
