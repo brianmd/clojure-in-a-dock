@@ -11,6 +11,7 @@ RUN adduser --disabled-password --gecos '' clojure && \
 
 RUN mkdir -p /root/docker
 WORKDIR /root
+ENV HOME /root
 
 EXPOSE 7894
 
